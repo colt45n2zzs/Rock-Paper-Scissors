@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Part 2
+  </title>
+</head>
+
+<body>
+
+  <div id="game">
+
+    <h1>You chose:<span id="userGuess"> </span></h1>
+    <br>
+    <h1>The computer chose:<span id="computerGuess"> </span></h1>
+    <br>
+    <h1>wins:<span id="winGame"></span></h1>
+    <br>
+    <h1>losses:<span id="loseGame"></span></h1>
+    <br>
+    <h1>ties:<span id="tieGame"></span></h1>
+
+  </div>
+
+  <script type="text/javascript">
+
+    var computerChoices = ["r", "p", "s"];
+
+
+      var userGuess = document.getElementById("userGuess");
+      var computerGuess = document.getElementById("computerGuess");
+      winGame.textContent = 0;
+      loseGame.textContent = 0;
+      tieGame.textContent = 0;
+      
+
+
+        document.onkeyup = function(event) {
+        userGuess.textContent = event.key;
+        computerGuess.textContent = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+        var userAnswer = event.key;
+     
+        
+        if (userAnswer == computerGuess.textContent) {
+          console.log(userAnswer);
+          console.log(computerGuess.textContent);
+          tieGame.innerHTML = tieGame.textContent ++;
+          
+        }
+
+        else if (userAnswer === "r" && computerGuess.textContent === "s") {
+          console.log(userAnswer)
+          console.log(computerGuess.textContent);
+            winGame.innerHTML = winGame.textContent+1;
+        
+        }
+
+        else if (userAnswer === "s" && computerGuess.textContent === "p") {
+          console.log(userAnswer)
+          console.log(computerGuess.textContent);
+            winGame.innerHTML = winGame.textContent +1;
+        }
+
+        else if (userAnswer === "p" && computerGuess.textContent === "r") {
+          console.log(userAnswer)
+          console.log(computerGuess.textContent);
+            winGame.innerHTML = winGame.textContent +1;
+        }
+
+        else { console.log(userAnswer)
+              console.log(computerGuess.textContent);
+              loseGame.innerHTML = loseGame.textContent +1; 
+
+        }
+
+          };
+
+     
+      
+ 
+      
+
+
+  </script>
+
+</body>
+
+</html>
+
+
+
+
